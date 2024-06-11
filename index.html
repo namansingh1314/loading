@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Zoom on Hover</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            transition: transform 0.5s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        h1:hover, h1:active {
+            transform: rotate(360deg);
+        }
+
+        .image-container {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: none; /* Ensure the image doesn't zoom on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>This App is Being Cooked</h1>
+    <div class="image-container">
+        <img src="/cooking.png" alt="Cooking">
+    </div>
+
+</body>
+</html>
